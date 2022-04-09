@@ -18,7 +18,7 @@ signals:
     void currentVertexChanged(int id, int state) const;
     void currentEdgeChanged(int id, int state) const;
     void nextIteration();
-    void delayChanged(int delay);
+    void delayChanged(unsigned long delay);
     void algoChanged(int algo);
 };
 

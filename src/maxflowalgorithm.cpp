@@ -3,8 +3,6 @@
 #include "fordfulkersonalgorithm.h"
 #include "graph.h"
 
-int MaxFlowAlgorithm::mDelay{1000};
-
 MaxFlowAlgorithm::MaxFlowAlgorithm(Graph *graph, QObject *parent) : QObject(parent), mGraph(graph)
 {}
 

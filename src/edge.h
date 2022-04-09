@@ -6,7 +6,7 @@ class Edge : public QObject
 {
     Q_OBJECT
 public:
-    explicit Edge(int id, int c, QObject *parent = nullptr);
+    Edge(int id, int c, QObject* parent = nullptr);
 
 private:
     int mId;

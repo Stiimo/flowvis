@@ -7,7 +7,7 @@
 #include <QQmlContext>
 #include <QThread>
 
-QString parseArguments(QCoreApplication &app)
+QString parseArguments(const QCoreApplication& app)
 {
     QCommandLineParser parser;
     parser.addPositionalArgument("input", "Input graph description", "/path/to/file");
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     QObject::connect(&bridge, &QmlBridge::nextIteration, &s, &Solver::nextIteration);
     QObject::connect(&bridge, &QmlBridge::algoChanged, &s, &Solver::setAlgorithm);
 
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/resources/main.qml"));
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreated,

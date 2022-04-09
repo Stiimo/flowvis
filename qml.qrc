@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>GraphArea.qml</file>
-        <file>Vertex.qml</file>
-        <file>Edge.qml</file>
-        <file>Arrow.qml</file>
+        <file>resources/Arrow.qml</file>
+        <file>resources/Edge.qml</file>
+        <file>resources/GraphArea.qml</file>
+        <file>resources/main.qml</file>
+        <file>resources/Vertex.qml</file>
     </qresource>
 </RCC>

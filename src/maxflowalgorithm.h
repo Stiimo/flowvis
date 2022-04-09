@@ -8,11 +8,13 @@ class MaxFlowAlgorithm : public QObject
 {
     Q_OBJECT
 public:
-    explicit MaxFlowAlgorithm(Graph *graph, QObject *parent = nullptr);
+    explicit MaxFlowAlgorithm(Graph* graph, QObject* parent = nullptr);
+
+    virtual ~MaxFlowAlgorithm() = default;
 
 public slots:
     void findFlowOneIteration();
-    void setDelay(int delay) { mDelay = delay; }
+    void setDelay(unsigned long delay) { mDelay = delay; }
 
 signals:
     void flowFound(int flow);
@@ -22,7 +24,7 @@ signals:
 protected:
     using Path = QVector<int>;
     Graph *mGraph;
-    static int mDelay;
+    inline static unsigned long mDelay { 1000 };
 
     virtual Path findAugmentingPath() const = 0;
 };

@@ -23,8 +23,8 @@ signals:
     void newEdge(int e, QVariantMap data);
     void edgeFlowChanged(int e, int f);
     void flowFound(int flow);
-    void currentVertexChanged(int id, int state) const;
-    void currentEdgeChanged(int id, int state) const;
+    void currentVertexChanged(int id, int state);
+    void currentEdgeChanged(int id, int state);
     void nextIteration();
     void delayChanged(int delay);
 
